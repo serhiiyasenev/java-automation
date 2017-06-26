@@ -10,7 +10,15 @@ import java.io.IOException;
 
 public class TestJsoup {
 
+    @Test
+    public void alala() throws IOException {
 
+        OkHttpClient client = new OkHttpClient.Builder().
+                addInterceptor(new UserAgentInterceptor("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")).
+                build();
+        //String html = client.newCall(new Request.Builder().url("http://www.business-template.com/").build()).execute().body().string();
+
+        String html = client.newCall(new Request.Builder().url("http://kismia.com/").build()).execute().body().string();
 
         Document document = Jsoup.parse(html);
         //Elements select = document.select(".hero-title");
