@@ -3,6 +3,7 @@ package lesson8;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +22,9 @@ public class TestNGExample {
     }
 
     @Test
-    public void aTest () {
+    @Parameters({"userEmail"})
+    public void aTest (String userEmail) {
+        System.out.println(userEmail);
         driver.get("http://google.com");
         driver.findElement(By.id("lst-ib")).clear();
         driver.findElement(By.id("lst-ib")).sendKeys("Hello, world!");
