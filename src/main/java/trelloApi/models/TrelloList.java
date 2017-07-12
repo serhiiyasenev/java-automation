@@ -9,6 +9,7 @@ public class TrelloList {
         public String name;
         public Boolean closed;
         public String idBoard;
+        public String idList;
         public Double pos;
         public Boolean subscribed;
 }
