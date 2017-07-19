@@ -2,10 +2,10 @@ package trelloApi.models;
 
 import java.util.Comparator;
 
-    public class ListOfCardsNameComparator implements Comparator<ListOfCards> {
+    public class ListOfCardsNameComparator implements Comparator<TrelloList> {
 
         @Override
-        public int compare(ListOfCards o1, ListOfCards o2)
+        public int compare(TrelloList o1, TrelloList o2)
         {
             int number1 = new Integer(o1.name);
             int number2 = new Integer(o2.name);

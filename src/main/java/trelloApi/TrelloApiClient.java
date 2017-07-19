@@ -9,9 +9,11 @@ import okhttp3.RequestBody;
 import org.testng.annotations.Test;
 import trelloApi.models.Board;
 import trelloApi.models.ListOfCards;
+import trelloApi.models.ListOfCardsNameComparator;
 import trelloApi.models.TrelloList;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.Collections;
 import java.util.List;
 
 public class TrelloApiClient {
@@ -110,6 +112,7 @@ public class TrelloApiClient {
                 System.out.println(trelloList.name);
             }
         }
+        Collections.sort(trelloListList, new ListOfCardsNameComparator());
     }
 }
 
