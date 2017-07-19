@@ -1,5 +1,6 @@
 package lesson24;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.Step;
 
