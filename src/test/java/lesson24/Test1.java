@@ -17,6 +17,7 @@ public class Test1 {
     @Test
     public void mySecondTest(){
         login();
+        Assert.assertTrue(false, "Что-то пошло не так при логине");
     }
 
     @Step

@@ -19,7 +19,7 @@ public void matchesPage() throws InterruptedException {
     matchesPage.open();
 
     System.out.println(matchesPage.getCurrentUserId());
-    List<String > dislikeUsersList = matchesPage.dislikeUsers(50);
+    List<String> dislikeUsersList = matchesPage.dislikeUsers(50);
     Thread.sleep(5000);
 
   for (String uid:dislikeUsersList){
