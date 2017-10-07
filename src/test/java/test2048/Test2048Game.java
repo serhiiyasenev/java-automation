@@ -27,7 +27,7 @@ public class Test2048Game extends TrelloApiClient {
                 driver.findElement(By.cssSelector(".restart-button")).click();
             }
                 while (driver.findElements(By.xpath("//div[@class=\"game-message game-over\"]/p")).size()==0) {
-                    actions.sendKeys(Keys.ARROW_DOWN).perform();
+                    actions.sendKeys(Keys.ENTER).perform();
                     actions.sendKeys(Keys.ARROW_UP).perform();
                     actions.sendKeys(Keys.ARROW_LEFT).perform();
                     // actions.sendKeys(Keys.ARROW_RIGHT).perform();

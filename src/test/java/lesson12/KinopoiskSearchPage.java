@@ -25,7 +25,7 @@ public class KinopoiskSearchPage implements SearchPage {
 
     @Override
     public void open() {
-       driver.get("https://www.kinopoisk.ru/");
+       driver.get("http://www.kinopoisk.ru/");
 
     }
 }
