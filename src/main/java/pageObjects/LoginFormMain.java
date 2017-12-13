@@ -4,7 +4,7 @@ import core.Elem;
 import org.openqa.selenium.By;
 
 
-public class LoginFormMain extends ILoginForm{
+public class LoginFormMain extends LoginForm{
     @Override
     protected void typeLogin(String login) {
         emailField.type(login);

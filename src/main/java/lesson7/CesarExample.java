@@ -11,9 +11,9 @@ public class CesarExample {
         String test;
         System.out.println("Введите текст:");
         Scanner in = new Scanner(System.in);
-        test = in.nextLine().toString();
+        test = in.nextLine();
         System.out.println("Введите шифт:");
-       Integer shift = new Integer(in.nextLine().toString());
+       Integer shift = new Integer(in.nextLine());
 
         System.out.println(cesarExample(test, shift));
     }

@@ -4,7 +4,7 @@ import core.MethodsFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
-public abstract class ILoginForm extends MethodsFactory{
+public abstract class LoginForm extends MethodsFactory{
 
    protected abstract void typeLogin (String login);
    protected abstract void typePassword (String password);
