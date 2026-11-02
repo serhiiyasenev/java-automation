@@ -17,11 +17,19 @@ import java.util.Collections;
 import java.util.List;
 
 public class TrelloApiClient {
+    private static String requireEnv(String name) {
+        String value = System.getenv(name);
+        if (value == null || value.trim().isEmpty()) {
+            throw new IllegalStateException(name + " must be configured outside source control.");
+        }
+        return value;
+    }
+
 
     public Gson gson = new Gson();
     public OkHttpClient okHttpClient = new OkHttpClient();
-    public static final String KEY = "438afea6a66904072dabb8eb8df01de2";
-    public static final String TOKEN = "705b8099d7182363cfaada712062dcd63d762da306700901a097256dd5c46096";
+    public static final String KEY = requireEnv("TRELLO_API_KEY");
+    public static final String TOKEN = requireEnv("TRELLO_API_TOKEN");
     public static final String BASE_URL = "https://api.trello.com/1/";
     public String boardId = "LVo8S7fH";
     public String listId = "59610fbe1310a8e951dea740"; // "595a7acfb7545e26d758c0e9"
