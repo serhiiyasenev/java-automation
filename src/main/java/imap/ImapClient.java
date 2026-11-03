@@ -41,8 +41,7 @@ public class ImapClient extends Imap {
     public void connect() throws InterruptedException {
         count = 0;
         while (!isConnected() && count++ < retry) {
-            System.out.println("Info: " + "Connecting to: " + email + ":" + password + " retry: "
-                    + retry + ", timeout: " + timeout + " sec");
+            System.out.println("Attempting IMAP connection (attempt " + count + " of " + retry + ").");
             store = openConnection(email, password, host);
             if (!isConnected() && count < retry)
                 Thread.sleep(5000);
