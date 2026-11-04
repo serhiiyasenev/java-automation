@@ -130,7 +130,7 @@
         <dependency>
             <groupId>ru.yandex.qatools.ashot</groupId>
             <artifactId>ashot</artifactId>
-            <version>1.5.2</version>
+            <version>1.5.4</version>
         </dependency>
 
         <!--  Gson: Java to Json conversion -->
