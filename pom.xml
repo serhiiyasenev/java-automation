@@ -10,7 +10,7 @@
         <allure.results.directory>${buildDirectory}/allure-results</allure.results.directory>
         <resultsPatternAllure>**/allure-results</resultsPatternAllure>
         <allure.version>1.5.2</allure.version>
-        <aspectj.version>1.8.3</aspectj.version>
+        <aspectj.version>1.9.26</aspectj.version>
     </properties>
 
     <build>
